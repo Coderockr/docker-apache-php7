@@ -29,7 +29,5 @@ WORKDIR /var/www/html
 
 EXPOSE 80
 
-USER www-data
-
 ENTRYPOINT [ "/usr/sbin/apache2" ]
 CMD ["-D", "FOREGROUND"]
