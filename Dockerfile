@@ -13,6 +13,7 @@ RUN locale-gen en_US.UTF-8 \
 	&& pecl install mongodb \
 	&& echo "extension=mongodb.so" >> /etc/php/7.0/apache2/php.ini \
 	&& echo "extension=mongodb.so" >> /etc/php/7.0/cli/php.ini
+RUN apt-get install -y php7.0-bcmath
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
